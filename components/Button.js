@@ -21,6 +21,8 @@ export default ({ onPress, text, size, theme, orient }) => {
     textStyles.push(styles.textSecondary);
   } else if (theme === "accent") {
     buttonStyles.push(styles.buttonAccent);
+  } else if (theme === "extra") {
+    buttonStyles.push(styles.buttonExtraLand);
   }
 
   return (
@@ -32,7 +34,7 @@ export default ({ onPress, text, size, theme, orient }) => {
 
 const screen = Dimensions.get("window");
 const buttonWidthPort = screen.width / 4;
-const buttonWidthLand = screen.width / 8;
+const buttonWidthLand = screen.width / 7;
 
 const styles = StyleSheet.create({
   button: {
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
   },
   buttonDoubleLand: {
     backgroundColor: "red",
-    width: buttonWidthLand * 8 - 35,
+    width: buttonWidthLand * 4 - 25,
     flex: 0,
   },
 });

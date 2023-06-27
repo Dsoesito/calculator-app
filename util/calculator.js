@@ -43,7 +43,11 @@ const handleEqual = (state) => {
         currentValue: `${previous / current}`,
         ...resetState,
       };
-
+    case "^":
+      return {
+        currentValue: `${Math.pow(previous, current)}`,
+        ...resetState,
+      };
     default:
       return state;
   }
@@ -64,6 +68,63 @@ const calculator = (type, value, state) => {
       return {
         ...state,
         currentValue: `${parseFloat(state.currentValue) * 0.01}`,
+      };
+    case "sqrt":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.sqrt(state.currentValue))}`,
+      };
+    case "square":
+      return {
+        ...state,
+        currentValue: `${parseFloat(state.currentValue * state.currentValue)}`,
+      };
+    case "cube":
+      return {
+        ...state,
+        currentValue: `${parseFloat(
+          state.currentValue * state.currentValue * state.currentValue
+        )}`,
+      };
+    case "eulpow":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.pow(Math.E, state.currentValue))}`,
+      };
+    case "sin":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.sin(state.currentValue))}`,
+      };
+    case "sinh":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.sinh(state.currentValue))}`,
+      };
+    case "cos":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.cos(state.currentValue))}`,
+      };
+    case "cosh":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.cosh(state.currentValue))}`,
+      };
+    case "tan":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.tan(state.currentValue))}`,
+      };
+    case "tanh":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.tanh(state.currentValue))}`,
+      };
+    case "abs":
+      return {
+        ...state,
+        currentValue: `${parseFloat(Math.abs(state.currentValue))}`,
       };
     case "operator":
       return {

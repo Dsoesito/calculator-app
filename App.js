@@ -31,6 +31,27 @@ const App = () => {
           <View>
             <Row>
               <Button
+                text="abs"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("abs")}
+              />
+
+              <Button
+                text="√"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("sqrt")}
+              />
+
+              <Button
+                text="π"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("number", parseFloat(Math.PI))}
+              />
+
+              <Button
                 text="C"
                 theme="secondary"
                 orient="landscape"
@@ -61,6 +82,27 @@ const App = () => {
 
             <Row>
               <Button
+                text="x^3"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("cube")}
+              />
+
+              <Button
+                text="x^2"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("square")}
+              />
+
+              <Button
+                text="rand"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("number", parseFloat(Math.random()))}
+              />
+
+              <Button
                 text="7"
                 orient="landscape"
                 onPress={() => HandleTap("number", 7)}
@@ -84,6 +126,27 @@ const App = () => {
             </Row>
 
             <Row>
+              <Button
+                text="x^y"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("operator", "^")}
+              />
+
+              <Button
+                text="sinh"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("sinh")}
+              />
+
+              <Button
+                text="sin"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("sin")}
+              />
+
               <Button
                 text="4"
                 orient="landscape"
@@ -109,6 +172,27 @@ const App = () => {
 
             <Row>
               <Button
+                text="e^x"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("eulpow")}
+              />
+
+              <Button
+                text="cosh"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("cosh")}
+              />
+
+              <Button
+                text="cos"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("cos")}
+              />
+
+              <Button
                 text="1"
                 orient="landscape"
                 onPress={() => HandleTap("number", 1)}
@@ -132,6 +216,27 @@ const App = () => {
             </Row>
 
             <Row>
+              <Button
+                text="e"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("number", parseFloat(Math.E))}
+              />
+
+              <Button
+                text="tanh"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("tanh")}
+              />
+
+              <Button
+                text="tan"
+                theme="accent"
+                orient="landscape"
+                onPress={() => HandleTap("tan")}
+              />
+
               <Button
                 text="0"
                 orient="landscape"
